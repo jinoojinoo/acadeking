@@ -1,0 +1,800 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1427508556329828}
+  m_IsPrefabParent: 1
+--- !u!1 &1427508556329828
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4117757614649412}
+  - component: {fileID: 114663893823057670}
+  m_Layer: 0
+  m_Name: GameNewUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4117757614649412
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1427508556329828}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114663893823057670
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1427508556329828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 7b7de660b238038418ea79f3a330f1d1, type: 2}
+  mSprites:
+  - name: Button_Orange
+    x: 1704
+    y: 2361
+    width: 269
+    height: 112
+    borderLeft: 20
+    borderRight: 20
+    borderTop: 25
+    borderBottom: 20
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Button_Orange_Highlighted
+    x: 1552
+    y: 2215
+    width: 269
+    height: 112
+    borderLeft: 20
+    borderRight: 20
+    borderTop: 25
+    borderBottom: 20
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Button_Orange_Selected
+    x: 185
+    y: 2097
+    width: 269
+    height: 112
+    borderLeft: 20
+    borderRight: 20
+    borderTop: 25
+    borderBottom: 20
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Button_Small_Cancel_Orange
+    x: 1259
+    y: 2098
+    width: 267
+    height: 111
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 1
+    paddingTop: 5
+    paddingBottom: 4
+  - name: Button_Small_Cancel_Orange_Highlighted
+    x: 991
+    y: 2098
+    width: 267
+    height: 111
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 1
+    paddingTop: 5
+    paddingBottom: 4
+  - name: Button_Small_Cancel_Orange_Selected
+    x: 455
+    y: 2097
+    width: 267
+    height: 112
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 1
+    paddingTop: 4
+    paddingBottom: 4
+  - name: Button_Small_Login_Orange
+    x: 1527
+    y: 2098
+    width: 267
+    height: 111
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 1
+    paddingTop: 5
+    paddingBottom: 4
+  - name: Button_Small_Login_Orange_Highlighted
+    x: 0
+    y: 1911
+    width: 267
+    height: 111
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 1
+    paddingTop: 5
+    paddingBottom: 4
+  - name: Button_Small_Login_Orange_Selected
+    x: 723
+    y: 2097
+    width: 267
+    height: 112
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 1
+    paddingTop: 4
+    paddingBottom: 4
+  - name: Button_Start_Orange
+    x: 791
+    y: 2215
+    width: 360
+    height: 112
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 4
+    paddingBottom: 4
+  - name: Button_Start_Orange_Highlighted
+    x: 430
+    y: 2215
+    width: 360
+    height: 112
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 4
+    paddingBottom: 4
+  - name: Button_Start_Orange_Selected
+    x: 1690
+    y: 2763
+    width: 356
+    height: 112
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 2
+    paddingTop: 4
+    paddingBottom: 4
+  - name: Checkmark
+    x: 1922
+    y: 3123
+    width: 82
+    height: 76
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 9
+    paddingRight: 9
+    paddingTop: 12
+    paddingBottom: 12
+  - name: Close
+    x: 1123
+    y: 2720
+    width: 70
+    height: 68
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 15
+    paddingRight: 15
+    paddingTop: 16
+    paddingBottom: 16
+  - name: Coin
+    x: 1922
+    y: 3200
+    width: 83
+    height: 80
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 9
+    paddingRight: 8
+    paddingTop: 10
+    paddingBottom: 10
+  - name: Cool
+    x: 1123
+    y: 2655
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Grass
+    x: 1707
+    y: 3796
+    width: 300
+    height: 300
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: HUD_Menu_Back
+    x: 550
+    y: 2335
+    width: 498
+    height: 138
+    borderLeft: 40
+    borderRight: 40
+    borderTop: 15
+    borderBottom: 10
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Icon_Lock
+    x: 1505
+    y: 2664
+    width: 49
+    height: 55
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 5
+    paddingRight: 6
+    paddingTop: 2
+    paddingBottom: 3
+  - name: Icon_User
+    x: 1451
+    y: 2662
+    width: 53
+    height: 57
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 4
+    paddingRight: 3
+    paddingTop: 3
+    paddingBottom: 0
+  - name: Inset_Brown
+    x: 961
+    y: 2789
+    width: 257
+    height: 332
+    borderLeft: 25
+    borderRight: 25
+    borderTop: 25
+    borderBottom: 25
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Inset_Circle_Dark
+    x: 1922
+    y: 3465
+    width: 126
+    height: 124
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 2
+    paddingTop: 3
+    paddingBottom: 3
+  - name: Inset_Dark
+    x: 1301
+    y: 2508
+    width: 549
+    height: 145
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 6
+    paddingRight: 5
+    paddingTop: 8
+    paddingBottom: 7
+  - name: Inset_Darker
+    x: 0
+    y: 2328
+    width: 549
+    height: 145
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 6
+    paddingRight: 5
+    paddingTop: 8
+    paddingBottom: 7
+  - name: Inset_Grey
+    x: 1152
+    y: 2231
+    width: 399
+    height: 96
+    borderLeft: 50
+    borderRight: 50
+    borderTop: 50
+    borderBottom: 50
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Inset_Light
+    x: 1707
+    y: 3612
+    width: 217
+    height: 183
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 7
+    paddingRight: 6
+    paddingTop: 4
+    paddingBottom: 3
+  - name: Inset_Light_Blue
+    x: 961
+    y: 2669
+    width: 153
+    height: 48
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 4
+    paddingRight: 3
+    paddingTop: 6
+    paddingBottom: 6
+  - name: Inset_Light_Green
+    x: 1451
+    y: 2720
+    width: 153
+    height: 48
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 4
+    paddingRight: 3
+    paddingTop: 6
+    paddingBottom: 6
+  - name: Inset_Light_Orange
+    x: 1219
+    y: 2707
+    width: 153
+    height: 48
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 4
+    paddingRight: 3
+    paddingTop: 6
+    paddingBottom: 6
+  - name: Inset_Light_Purple
+    x: 1219
+    y: 2658
+    width: 153
+    height: 48
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 4
+    paddingRight: 3
+    paddingTop: 6
+    paddingBottom: 6
+  - name: Inset_Square_Dark
+    x: 961
+    y: 2718
+    width: 161
+    height: 70
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 5
+    paddingRight: 4
+    paddingTop: 5
+    paddingBottom: 5
+  - name: Left
+    x: 1219
+    y: 2756
+    width: 231
+    height: 365
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 135
+    paddingRight: 134
+    paddingTop: 68
+    paddingBottom: 67
+  - name: Login_Orange
+    x: 0
+    y: 2210
+    width: 429
+    height: 117
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 6
+    paddingRight: 5
+    paddingTop: 7
+    paddingBottom: 6
+  - name: Menu_Border
+    x: 0
+    y: 2474
+    width: 1300
+    height: 179
+    borderLeft: 90
+    borderRight: 90
+    borderTop: 20
+    borderBottom: 20
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Menu_Border Small
+    x: 1049
+    y: 2381
+    width: 654
+    height: 92
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 16
+    paddingRight: 15
+    paddingTop: 9
+    paddingBottom: 9
+  - name: Menu_Grey
+    x: 1154
+    y: 3604
+    width: 552
+    height: 492
+    borderLeft: 50
+    borderRight: 50
+    borderTop: 30
+    borderBottom: 30
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Menu_Middle
+    x: 0
+    y: 3590
+    width: 1153
+    height: 506
+    borderLeft: 30
+    borderRight: 30
+    borderTop: 30
+    borderBottom: 30
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Navigation_Arrows
+    x: 1851
+    y: 2476
+    width: 174
+    height: 177
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 44
+    paddingRight: 42
+    paddingTop: 41
+    paddingBottom: 42
+  - name: Navigation_Middle
+    x: 1935
+    y: 3054
+    width: 66
+    height: 67
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 1
+    paddingTop: 1
+    paddingBottom: 1
+  - name: Navigation_Rim
+    x: 1690
+    y: 2876
+    width: 244
+    height: 245
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 8
+    paddingRight: 8
+    paddingTop: 9
+    paddingBottom: 6
+  - name: Orange
+    x: 0
+    y: 3122
+    width: 960
+    height: 467
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 20
+    paddingRight: 20
+    paddingTop: 16
+    paddingBottom: 17
+  - name: Orange_Highlighted
+    x: 961
+    y: 3122
+    width: 960
+    height: 467
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 20
+    paddingRight: 20
+    paddingTop: 16
+    paddingBottom: 17
+  - name: Orange_Selected
+    x: 0
+    y: 2654
+    width: 960
+    height: 467
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 20
+    paddingRight: 20
+    paddingTop: 16
+    paddingBottom: 17
+  - name: Pause
+    x: 1373
+    y: 2685
+    width: 68
+    height: 70
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 16
+    paddingRight: 16
+    paddingTop: 15
+    paddingBottom: 15
+  - name: Pause_Button_Orange
+    x: 1925
+    y: 3704
+    width: 94
+    height: 91
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 3
+    paddingRight: 3
+    paddingTop: 4
+    paddingBottom: 5
+  - name: Pause_Button_Orange_Highlighted
+    x: 1925
+    y: 3612
+    width: 94
+    height: 91
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 3
+    paddingRight: 3
+    paddingTop: 4
+    paddingBottom: 5
+  - name: Pause_Button_Orange_Selected
+    x: 1922
+    y: 3373
+    width: 94
+    height: 91
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 3
+    paddingRight: 3
+    paddingTop: 4
+    paddingBottom: 5
+  - name: Pointer
+    x: 1605
+    y: 2688
+    width: 58
+    height: 80
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 21
+    paddingRight: 21
+    paddingTop: 10
+    paddingBottom: 10
+  - name: Portrait_Power_Back_Orange
+    x: 1795
+    y: 2057
+    width: 152
+    height: 152
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 19
+    paddingRight: 19
+    paddingTop: 19
+    paddingBottom: 19
+  - name: Portrait_Power_Front_Grey
+    x: 0
+    y: 2023
+    width: 184
+    height: 186
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 3
+    paddingRight: 3
+    paddingTop: 3
+    paddingBottom: 1
+  - name: Reload
+    x: 1922
+    y: 3281
+    width: 86
+    height: 91
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 7
+    paddingRight: 7
+    paddingTop: 5
+    paddingBottom: 4
+  - name: Right
+    x: 1451
+    y: 2769
+    width: 238
+    height: 352
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 131
+    paddingRight: 131
+    paddingTop: 74
+    paddingBottom: 74
+  - name: Scrollbar_Bar_Brown
+    x: 0
+    y: 1509
+    width: 15
+    height: 401
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 3
+    paddingRight: 2
+    paddingTop: 5
+    paddingBottom: 4
+  - name: Scrollbar_Scroller_Blue
+    x: 2008
+    y: 4072
+    width: 31
+    height: 24
+    borderLeft: 6
+    borderRight: 6
+    borderTop: 6
+    borderBottom: 6
+    paddingLeft: 5
+    paddingRight: 4
+    paddingTop: 3
+    paddingBottom: 3
+  - name: Scrollbar_Scroller_Green
+    x: 2008
+    y: 4047
+    width: 31
+    height: 24
+    borderLeft: 6
+    borderRight: 6
+    borderTop: 6
+    borderBottom: 6
+    paddingLeft: 5
+    paddingRight: 4
+    paddingTop: 3
+    paddingBottom: 3
+  - name: Scrollbar_Scroller_Orange
+    x: 2008
+    y: 4022
+    width: 31
+    height: 24
+    borderLeft: 6
+    borderRight: 6
+    borderTop: 6
+    borderBottom: 6
+    paddingLeft: 5
+    paddingRight: 4
+    paddingTop: 3
+    paddingBottom: 3
+  - name: Scrollbar_Scroller_Purple
+    x: 2008
+    y: 3997
+    width: 31
+    height: 24
+    borderLeft: 6
+    borderRight: 6
+    borderTop: 6
+    borderBottom: 6
+    paddingLeft: 5
+    paddingRight: 4
+    paddingTop: 3
+    paddingBottom: 3
+  mPixelSize: 1
+  mReplacement: {fileID: 0}
+  mCoordinates: 0
+  sprites: []

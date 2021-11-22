@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: dbd47183140f97043b7dd2dc69a9e01e
+timeCreated: 1567579954
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: WalrusGumbo
+  fontNames:
+  - WalrusGumbo
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 280181111bee9a34c88084643978ee4f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

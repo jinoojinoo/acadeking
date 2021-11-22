@@ -1,0 +1,141 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+using UnityEngine.Networking;
+
+public partial class MyNetworkGamePlayer : NetworkBehaviour
+{
+    // move network
+    [Header("Ship Movement Properties")]
+    public bool canSendNetworkMovement;
+//    public float speed;
+    public float networkSendRate = 5;
+    public float timeBetweenMovementStart;
+    public float timeBetweenMovementEnd;
+
+//     [Header("Camera Movement Properties")]
+//     public float distance = 15.0f;
+//     public float xSpeed = 60.0f;
+//     public float ySpeed = 120.0f;
+//     private float cameraX = 0;
+//     private float cameraY = 0;
+
+    [Header("Lerping Properties")]
+    public bool isLerpingPosition;
+    public bool isLerpingRotation;
+    public Vector3 realPosition;
+    public Quaternion realRotation;
+    public Vector3 lastRealPosition;
+    public Quaternion lastRealRotation;
+    public float timeStartedLerping;
+    public float timeToLerp;
+
+    private void RegisterNetworkMessages()
+    {
+        NetworkMessageManager.Instance.AddReceivePacketHandler(Network_ID.SC_PlayerMovement, OnReceiveMovementMessage);
+    }
+
+    private void OnReceiveMovementMessage(NetworkMessage _message)
+    {
+        NetworkMessage_PlayerMovement _msg = _message.ReadMessage<NetworkMessage_PlayerMovement>();
+        if (MyNetworkManager.Instance.InGamePlayerList.ContainsKey(_msg.netID) == false)
+            return;
+
+        MyNetworkGamePlayer player = MyNetworkManager.Instance.InGamePlayerList[_msg.netID];
+        if (player.IsLocalGamePlayer)
+            return;
+
+        player.ReceiveMovementMessage(_msg.objectPosition, _msg.objectRotation, _msg.time);
+    }
+
+    public void ReceiveMovementMessage(Vector3 _position, Quaternion _rotation, float _timeToLerp)
+    {
+        lastRealPosition = realPosition;
+        lastRealRotation = realRotation;
+        realPosition = _position;
+        realRotation = _rotation;
+        timeToLerp = _timeToLerp;
+
+        if (realPosition != MyTrans.position)
+        {
+            isLerpingPosition = true;
+        }
+
+        if (realRotation.eulerAngles != MyTrans.rotation.eulerAngles)
+        {
+            isLerpingRotation = true;
+        }
+
+        timeStartedLerping = Time.time;
+    }
+
+    private void Update()
+    {
+        if (IsLocalGamePlayer == false)
+            return;
+
+        UpdatePlayerMovement();
+    }
+
+    private void UpdatePlayerMovement()
+    {
+        if (!canSendNetworkMovement)
+        {
+            canSendNetworkMovement = true;
+            StartCoroutine(StartNetworkSendCooldown());
+        }
+    }
+
+    private IEnumerator StartNetworkSendCooldown()
+    {
+        timeBetweenMovementStart = Time.time;
+        yield return new WaitForSeconds((1 / networkSendRate));
+        SendNetworkMovement();
+    }
+
+    private void SendNetworkMovement()
+    {
+        timeBetweenMovementEnd = Time.time;
+        SendMovementMessage(LobbyNetID, MyTrans.position, MyTrans.rotation, (timeBetweenMovementEnd - timeBetweenMovementStart));
+        canSendNetworkMovement = false;
+    }
+
+    public void SendMovementMessage(uint _playerID, Vector3 _position, Quaternion _rotation, float _timeTolerp)
+    {
+        NetworkMessageManager.Instance.SendMessage(Network_ID.CS_PlayerMovement, _playerID, _position, _rotation, _timeTolerp);
+    }
+
+    private void FixedUpdate()
+    {
+        if (!IsLocalGamePlayer)
+        {
+            NetworkLerp();
+        }
+    }
+
+    private void NetworkLerp()
+    {
+        if (isLerpingPosition)
+        {
+            float lerpPercentage = (Time.time - timeStartedLerping) / timeToLerp;
+
+            MyTrans.position = Vector3.Lerp(lastRealPosition, realPosition, lerpPercentage);
+            Vector3 dir = (realPosition - lastRealPosition).normalized;
+            if ((dir.x > 0 && MyTrans.localScale.x > 0) ||
+                (dir.x < 0 && MyTrans.localScale.x < 0))
+            {
+                Vector3 scale = MyTrans.localScale;
+                scale.x = -1;
+                MyTrans.localScale = scale;
+            }
+        }
+
+        if (isLerpingRotation)
+        {
+            float lerpPercentage = (Time.time - timeStartedLerping) / timeToLerp;
+
+            transform.rotation = Quaternion.Lerp(lastRealRotation, realRotation, lerpPercentage);
+        }
+    }
+}

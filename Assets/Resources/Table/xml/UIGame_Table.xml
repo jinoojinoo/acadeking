@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> 
+<TABLE Version ="1">
+  <UIGame>
+    <UI_TYPE>UI_GameResult</UI_TYPE>
+    <PATH>Prefabs/GameUI/UI_GameResult</PATH>
+  </UIGame>
+  <UIGame>
+    <UI_TYPE>UI_RoomList</UI_TYPE>
+    <PATH>Prefabs/GameUI/UI_RoomList</PATH>
+  </UIGame>
+  <UIGame>
+    <UI_TYPE>UI_MemberList</UI_TYPE>
+    <PATH>Prefabs/GameUI/UI_MemberList</PATH>
+  </UIGame>
+  <UIGame>
+    <UI_TYPE>UI_Shop</UI_TYPE>
+    <PATH>Prefabs/GameUI/UI_Shop</PATH>
+  </UIGame>
+  <UIGame>
+    <UI_TYPE>UI_Option</UI_TYPE>
+    <PATH>Prefabs/GameUI/UI_Option</PATH>
+  </UIGame>
+  <UIGame>
+    <UI_TYPE>UI_Inventory</UI_TYPE>
+    <PATH>Prefabs/GameUI/UI_Inventory</PATH>
+  </UIGame>
+  <UIGame>
+    <UI_TYPE>UI_CreateRoom</UI_TYPE>
+    <PATH>Prefabs/GameUI/UI_CreateRoom</PATH>
+  </UIGame>
+</TABLE>

@@ -1,0 +1,111 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+using UnityEngine.Networking;
+
+public partial class MyNetworkGamePlayer : NetworkBehaviour
+{
+    private Transform m_myTrans = null;
+    private Transform MyTrans
+    {
+        get
+        {
+            if (m_myTrans == null)
+                m_myTrans = this.transform;
+            return m_myTrans;
+        }
+    }
+
+    [SyncVar]
+    public int CharacterIndex = 0;
+    [SyncVar]
+    public bool IsMonster = false;
+
+    public bool IsLocalGamePlayer
+    {
+        get
+        {
+            return MyNetworkManager.Instance.MyLobbyPlayer.netId.Value == LobbyNetID;
+        }
+    }
+
+    [SyncVar]
+    public uint LobbyNetID = 0;
+
+    [Command]
+    public void Cmd_ViewZombie()
+    {
+        Rpc_ViewZombie();
+    }
+
+    [ClientRpc]
+    private void Rpc_ViewZombie()
+    {
+        Character_Zombie zombie = TargetManager.Instance.GetZombie() as Character_Zombie;
+        zombie.ChangeCharacter();
+    }
+
+    public override void OnStartClient()
+    {
+        Debug.LogError("gameplayer onstartclient");
+
+        TargetManager.Instance.MakeCharacter(this);
+
+        MyNetworkManager.Instance.AddInGamePlayer(this);
+        // complete - create character 
+        MyNetworkManager.Instance.MyLobbyPlayer.CheckInitComplete();
+        // complete - scene load
+        MyNetworkManager.Instance.MyLobbyPlayer.OnLoadSceneState(MyNetworkLobbyPlayer.SceneLoadState.Complete);
+
+        if (IsLocalGamePlayer)
+            MyNetworkManager.Instance.MyGamePlayer = this; 
+
+        // move network
+        if (IsLocalGamePlayer)
+        {
+            canSendNetworkMovement = false;
+            RegisterNetworkMessages();
+        }
+        else
+        {
+            isLerpingPosition = false;
+            isLerpingRotation = false;
+
+            realPosition = transform.position;
+            realRotation = transform.rotation;
+        }
+
+        Debug.LogError("UI_StatePlayers.Instance: " + UI_StatePlayers.Instance);
+
+        if (UI_StatePlayers.Instance != null)
+            UI_StatePlayers.Instance.ResetComponent(true);
+    }
+
+    //[s->c]
+    public void InitGamePlayer(MyNetworkLobbyPlayer player)
+    {
+        Debug.LogError("InitGamePlayer");
+
+        CharacterIndex = player.MyNetworkPlayerInfo.CharacterIndex;
+        IsMonster = player.MyNetworkPlayerInfo.IsMonster;
+        LobbyNetID = player.netId.Value;
+    }
+
+    public override void OnNetworkDestroy()
+    {
+        base.OnNetworkDestroy();
+
+        if (MyNetworkManager.Instance != null)
+            MyNetworkManager.Instance.RemoveGamePlayer(this);
+
+        if (NetworkMessageManager.Instance != null)
+            NetworkMessageManager.Instance.RemoveReceivePacketHandler(Network_ID.SC_PlayerMovement, OnReceiveMovementMessage);
+
+        if (m_onNetworkDestroy != null)
+        {
+            m_onNetworkDestroy();
+            m_onNetworkDestroy = null;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+using UnityEngine.Networking;
+using UnityEngine.Networking.Match;
+
+public class NetworkMessage_CS_UpdateChat : NetworkMessage_Receive
+{
+    public NetworkMessage_CS_UpdateChat()
+    {
+        m_noneuiAction = true;
+    }
+
+    public string chatmessage;
+
+    protected override void SendMessage(Network_ID id, params object[] parameters)
+    {
+        chatmessage = string.Format("{0} : {1}", MyNetworkManager.Instance.MyLobbyPlayer.netId, (string)parameters[0]);
+        MyNetworkManager.Instance.client.Send((short)id, this);
+    }
+}
+
+public class NetworkMessage_CS_ReadyForGame : NetworkMessage_Receive
+{
+    public NetworkMessage_CS_ReadyForGame()
+    {
+        m_noneuiAction = true;
+    }
+
+    protected override void SendMessage(Network_ID id, params object[] parameters)
+    {
+        MyNetworkManager.Instance.client.Send((short)id, this);
+    }
+}

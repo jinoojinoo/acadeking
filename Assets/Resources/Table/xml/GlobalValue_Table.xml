@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TABLE xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ASPECT_X>9</ASPECT_X>
+  <ASPECT_Y>16</ASPECT_Y>
+  <dynamicFriction>1</dynamicFriction>
+  <staticFriction>1</staticFriction>
+  <bounciness>0.75</bounciness>
+  <ThrowStrength>29</ThrowStrength>
+  <gravity>0,-22,0</gravity>
+  <ThrowPower>0,580,120</ThrowPower>
+  <ThrowHeigh>2.5</ThrowHeigh>
+  <ThrowMouseHeight>250</ThrowMouseHeight>
+  <ThrowMouseStrength>1.0</ThrowMouseStrength>
+  <ThrowMouseWeight>50</ThrowMouseWeight>
+  <TimeScale>1.2</TimeScale>
+  <BallSize>1.2</BallSize>
+  <RimSize>1.2</RimSize>
+  <MAP_SIZE_X>3000.0</MAP_SIZE_X>
+  <MAP_SIZE_Y>3000.0</MAP_SIZE_Y>
+  <MOVE_OFFSET_LEFT>200.0</MOVE_OFFSET_LEFT>
+  <MOVE_OFFSET_RIGHT>-200.0</MOVE_OFFSET_RIGHT>
+  <MOVE_OFFSET_TOP>-200.0</MOVE_OFFSET_TOP>
+  <MOVE_OFFSET_BOTTOM>200.0</MOVE_OFFSET_BOTTOM>
+  <DefaultCameraPosition>0,7.2,-11.1</DefaultCameraPosition>
+  <RoundTime1>30</RoundTime1>
+  <RoundTime2>45</RoundTime2>
+  <RoundTime3>60</RoundTime3>
+  <Cost_Point>1000</Cost_Point>
+  <Cost_AddSlot>5000</Cost_AddSlot>
+  <AD_REWARD_GOLD>50</AD_REWARD_GOLD>
+</TABLE>

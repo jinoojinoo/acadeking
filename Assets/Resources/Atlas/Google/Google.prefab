@@ -1,0 +1,423 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1563084846976138}
+  m_IsPrefabParent: 1
+--- !u!1 &1563084846976138
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4130361931245444}
+  - component: {fileID: 114253609798460288}
+  m_Layer: 0
+  m_Name: Google
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4130361931245444
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1563084846976138}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114253609798460288
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1563084846976138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 73af9cc63faf3fb4aa8573bf8386b74c, type: 2}
+  mSprites:
+  - name: btn_google_signin_light_disabled_hdpi.9
+    x: 1898
+    y: 1976
+    width: 105
+    height: 72
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: btn_google_signin_light_focus_hdpi.9
+    x: 1898
+    y: 1903
+    width: 105
+    height: 72
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: btn_google_signin_light_normal_hdpi.9
+    x: 1898
+    y: 1830
+    width: 105
+    height: 72
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: btn_google_signin_light_pressed_hdpi.9
+    x: 1898
+    y: 1757
+    width: 105
+    height: 72
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Button_Start_Orange
+    x: 838
+    y: 1160
+    width: 360
+    height: 112
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 4
+    paddingBottom: 4
+  - name: Button_Start_Orange_Highlighted
+    x: 457
+    y: 26
+    width: 360
+    height: 112
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 4
+    paddingBottom: 4
+  - name: Button_Start_Orange_Selected
+    x: 1199
+    y: 1160
+    width: 356
+    height: 112
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 2
+    paddingTop: 4
+    paddingBottom: 4
+  - name: games_achievements
+    x: 838
+    y: 682
+    width: 322
+    height: 477
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 95
+    paddingRight: 95
+    paddingTop: 27
+    paddingBottom: 8
+  - name: games_achievements_green
+    x: 838
+    y: 204
+    width: 322
+    height: 477
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 95
+    paddingRight: 95
+    paddingTop: 27
+    paddingBottom: 8
+  - name: games_achievements_white
+    x: 1161
+    y: 682
+    width: 322
+    height: 477
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 95
+    paddingRight: 95
+    paddingTop: 27
+    paddingBottom: 8
+  - name: games_controller
+    x: 0
+    y: 1706
+    width: 484
+    height: 342
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 14
+    paddingRight: 14
+    paddingTop: 93
+    paddingBottom: 77
+  - name: games_controller_grey
+    x: 485
+    y: 1706
+    width: 484
+    height: 342
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 14
+    paddingRight: 14
+    paddingTop: 93
+    paddingBottom: 77
+  - name: games_controller_white
+    x: 970
+    y: 1706
+    width: 484
+    height: 342
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 14
+    paddingRight: 14
+    paddingTop: 93
+    paddingBottom: 77
+  - name: games_gifts
+    x: 457
+    y: 895
+    width: 380
+    height: 377
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 66
+    paddingRight: 66
+    paddingTop: 59
+    paddingBottom: 76
+  - name: games_gifts_green
+    x: 457
+    y: 517
+    width: 380
+    height: 377
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 66
+    paddingRight: 66
+    paddingTop: 59
+    paddingBottom: 76
+  - name: games_gifts_white
+    x: 457
+    y: 139
+    width: 380
+    height: 377
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 66
+    paddingRight: 66
+    paddingTop: 59
+    paddingBottom: 76
+  - name: games_leaderboards
+    x: 0
+    y: 1344
+    width: 456
+    height: 361
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 28
+    paddingRight: 28
+    paddingTop: 58
+    paddingBottom: 93
+  - name: games_leaderboards_green
+    x: 0
+    y: 982
+    width: 456
+    height: 361
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 28
+    paddingRight: 28
+    paddingTop: 58
+    paddingBottom: 93
+  - name: games_leaderboards_white
+    x: 0
+    y: 620
+    width: 456
+    height: 361
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 28
+    paddingRight: 28
+    paddingTop: 58
+    paddingBottom: 93
+  - name: games_matches
+    x: 457
+    y: 1273
+    width: 436
+    height: 432
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 38
+    paddingRight: 38
+    paddingTop: 41
+    paddingBottom: 39
+  - name: games_matches_green
+    x: 894
+    y: 1273
+    width: 436
+    height: 432
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 38
+    paddingRight: 38
+    paddingTop: 41
+    paddingBottom: 39
+  - name: games_matches_white
+    x: 1331
+    y: 1273
+    width: 436
+    height: 432
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 38
+    paddingRight: 38
+    paddingTop: 41
+    paddingBottom: 39
+  - name: games_quests_green
+    x: 1484
+    y: 689
+    width: 322
+    height: 470
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 94
+    paddingRight: 96
+    paddingTop: 21
+    paddingBottom: 21
+  - name: games_quests_grey
+    x: 1161
+    y: 211
+    width: 322
+    height: 470
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 94
+    paddingRight: 96
+    paddingTop: 21
+    paddingBottom: 21
+  - name: games_quests_white
+    x: 1484
+    y: 211
+    width: 322
+    height: 470
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 94
+    paddingRight: 96
+    paddingTop: 21
+    paddingBottom: 21
+  - name: games_savedgames_green
+    x: 1455
+    y: 1754
+    width: 442
+    height: 294
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 35
+    paddingRight: 35
+    paddingTop: 102
+    paddingBottom: 116
+  - name: games_savedgames_grey
+    x: 0
+    y: 325
+    width: 442
+    height: 294
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 35
+    paddingRight: 35
+    paddingTop: 102
+    paddingBottom: 116
+  - name: games_savedgames_white
+    x: 0
+    y: 30
+    width: 442
+    height: 294
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 35
+    paddingRight: 35
+    paddingTop: 102
+    paddingBottom: 116
+  mPixelSize: 1
+  mReplacement: {fileID: 0}
+  mCoordinates: 0
+  sprites: []

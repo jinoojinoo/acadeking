@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TABLE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <UIPopup>
+    <POPUP_TYPE>ReturnLobby</POPUP_TYPE>
+    <PATH>Prefabs/Popup/MessageBox</PATH>
+    <Title_String>확인</Title_String>
+    <MSG_String>로비로 돌아 갑니다.</MSG_String>
+    <Button1_String>확인</Button1_String>
+  </UIPopup>
+  <UIPopup>
+    <POPUP_TYPE>GameEnd</POPUP_TYPE>
+    <PATH>Prefabs/Popup/MessageBox</PATH>
+    <Title_String>확인</Title_String>
+    <MSG_String>게임을 종료 하시겠습니까?</MSG_String>
+    <Button1_String>확인</Button1_String>
+    <Button2_String>취소</Button2_String>
+  </UIPopup>
+  <UIPopup>
+    <POPUP_TYPE>InBattle_Esc</POPUP_TYPE>
+    <PATH>Prefabs/Popup/MessageBox</PATH>
+    <Title_String>게임종료</Title_String>
+    <MSG_String>메인화면으로 이동 하시겠습니까?</MSG_String>
+    <MSG_Option>1</MSG_Option>
+    <Button1_String>메인화면</Button1_String>
+    <Button2_String>계속</Button2_String>
+  </UIPopup>
+  <UIPopup>
+    <POPUP_TYPE>Create_Room</POPUP_TYPE>
+    <PATH>Prefabs/Popup/CreateRoom</PATH>
+    <Title_String>설정</Title_String>
+    <MSG_String></MSG_String>
+    <Button1_String>만들기</Button1_String>
+    <Button2_String>취소</Button2_String>
+    <Button3_String>이름</Button3_String>
+    <Button4_String>최대 인원(max: 6)</Button4_String>
+  </UIPopup>
+  <UIPopup>
+    <POPUP_TYPE>Leave_Room</POPUP_TYPE>
+    <PATH>Prefabs/Popup/MessageBox</PATH>
+    <Title_String>확인</Title_String>
+    <MSG_String>로비로 돌아가시겠습니까?</MSG_String>
+    <Button1_String>로비</Button1_String>
+    <Button2_String>계속</Button2_String>
+  </UIPopup>
+  <UIPopup>
+    <POPUP_TYPE>Notice_WaitInGame</POPUP_TYPE>
+    <PATH>Prefabs/Popup/Notice_WaitForIngame</PATH>
+    <Title_String>확인</Title_String>
+    <MSG_String>상대를 기다리는 중 입니다.</MSG_String>
+    <Button1_String>시작</Button1_String>
+  </UIPopup>
+  <UIPopup>
+    <POPUP_TYPE>NotConnectNetwork</POPUP_TYPE>
+    <PATH>Prefabs/Popup/MessageBox</PATH>
+    <Title_String>네트워크</Title_String>
+    <MSG_String>네트워크 상태를\n 확인해 주세요.</MSG_String>
+    <Button1_String>확인</Button1_String>
+  </UIPopup>
+  <UIPopup>
+    <POPUP_TYPE>Item_Buy</POPUP_TYPE>
+    <PATH>Prefabs/Popup/MessageBox</PATH>
+    <Title_String>구입</Title_String>
+    <MSG_String>{0}을 구매하시겠습니까?</MSG_String>
+    <Button1_String>확인</Button1_String>
+    <Button2_String>취소</Button2_String>
+  </UIPopup>
+  <UIPopup>
+    <POPUP_TYPE>Item_Equip</POPUP_TYPE>
+    <PATH>Prefabs/Popup/MessageBox</PATH>
+    <Title_String>착용</Title_String>
+    <MSG_String></MSG_String>
+    <Button1_String>확인</Button1_String>
+    <Button2_String>취소</Button2_String>
+  </UIPopup>
+  <UIPopup>
+    <POPUP_TYPE>Item_UnEquip</POPUP_TYPE>
+    <PATH>Prefabs/Popup/MessageBox</PATH>
+    <Title_String>해제</Title_String>
+    <MSG_String></MSG_String>
+    <Button1_String>확인</Button1_String>
+    <Button2_String>취소</Button2_String>
+  </UIPopup>
+  <UIPopup>
+    <POPUP_TYPE>GoldError</POPUP_TYPE>
+    <PATH>Prefabs/Popup/MessageBox</PATH>
+    <Title_String>골드 부족</Title_String>
+    <MSG_String>골드가 부족합니다</MSG_String>
+    <Button1_String>광고보기\n[00de05](+{0} Gold)[-]</Button1_String>
+    <Button2_String>취소</Button2_String>
+  </UIPopup>
+  <UIPopup>
+    <POPUP_TYPE>Create_Error_Name</POPUP_TYPE>
+    <PATH>Prefabs/Popup/MessageBox</PATH>
+    <Title_String>방 설정</Title_String>
+    <MSG_String>방 이름을 설정해 주세요</MSG_String>
+    <Button1_String>확인</Button1_String>
+  </UIPopup>
+  <UIPopup>
+    <POPUP_TYPE>GuestLogin_Warning</POPUP_TYPE>
+    <PATH>Prefabs/Popup/MessageBox</PATH>
+    <Title_String>게스트 로그인</Title_String>
+    <MSG_String>게스트 로그인의 경우 기기 전환 또는 게임 삭제 후 재설치 시\n[FF0000]데이터가 유실될 수 있습니다.[-]\n계속 진행하시겠습니까?</MSG_String>
+    <FontSize>40</FontSize>
+    <Button1_String>확인</Button1_String>
+    <Button2_String>취소</Button2_String>
+  </UIPopup>
+  <UIPopup>
+    <POPUP_TYPE>GuestLogin_Name</POPUP_TYPE>
+    <PATH>Prefabs/Popup/MessageBox</PATH>
+    <Title_String>게스트 로그인</Title_String>
+    <MSG_String>이름을 입력해 주세요</MSG_String>
+    <Button1_String>확인</Button1_String>
+  </UIPopup>
+  <UIPopup>
+    <POPUP_TYPE>GoogleLogin</POPUP_TYPE>
+    <PATH>Prefabs/Popup/MessageBox</PATH>
+    <Title_String>구글 로그인</Title_String>
+    <MSG_String>구글 계정으로 로그인\n하시겠습니까?</MSG_String>
+    <Button1_String>확인</Button1_String>
+    <Button2_String>취소</Button2_String>
+  </UIPopup>
+  <UIPopup>
+    <POPUP_TYPE>Ball_Point</POPUP_TYPE>
+    <PATH>Prefabs/Popup/MessageBox</PATH>
+    <Title_String>점수</Title_String>
+    <MSG_String>"[FF0000]{0}[-]점 볼"을 "[00de05]{1}[-]점 볼"로\n업그레이드 하시겠습니까?\n{2} Gold</MSG_String>
+    <Button1_String>확인</Button1_String>
+    <Button2_String>취소</Button2_String>
+  </UIPopup>
+  <UIPopup>
+    <POPUP_TYPE>Ball_AddSlot</POPUP_TYPE>
+    <PATH>Prefabs/Popup/MessageBox</PATH>
+    <Title_String>공 추가</Title_String>
+    <Button1_String>확인</Button1_String>
+    <Button2_String>취소</Button2_String>
+  </UIPopup>
+  <UIPopup>
+    <POPUP_TYPE>BuyProduct</POPUP_TYPE>
+    <PATH>Prefabs/Popup/MessageBox</PATH>
+    <Title_String>구매</Title_String>
+    <MSG_String>[00de05]{0}[-]\n구매 성공 하였습니다.</MSG_String>
+    <Button1_String>확인</Button1_String>
+  </UIPopup>
+  <UIPopup>
+    <POPUP_TYPE>BuyAD</POPUP_TYPE>
+    <PATH>Prefabs/Popup/MessageBox</PATH>
+    <Title_String>구매</Title_String>
+    <MSG_String>광고 없애기 를 구매 하시겠습니까?</MSG_String>
+    <Button1_String>5000</Button1_String>
+    <Button2_String>취소</Button2_String>
+  </UIPopup>
+  <UIPopup>
+    <POPUP_TYPE>GameModeSelect</POPUP_TYPE>
+    <PATH>Prefabs/Popup/MessageBox</PATH>
+    <Title_String>게임모드 설정</Title_String>
+    <MSG_String>농구공을 던질시 [FF0000]게이지[-] 를 이용하시겠습니까?\n([00de05]설정창[-] 에서 언제든지 변경하실수 있습니다.)</MSG_String>
+    <Button1_String>터치 모드</Button1_String>
+    <Button2_String>게이지 모드</Button2_String>
+  </UIPopup>
+  <UIPopup>
+    <POPUP_TYPE>Notice_WaitForLogin</POPUP_TYPE>
+    <PATH>Prefabs/Popup/Notice_WaitForLogin</PATH>
+    <Title_String>구글 로그인</Title_String>
+    <MSG_String>구글 로그인 중입니다...</MSG_String>
+  </UIPopup>
+</TABLE>

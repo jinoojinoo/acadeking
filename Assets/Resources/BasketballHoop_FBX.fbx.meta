@@ -1,0 +1,171 @@
+fileFormatVersion: 2
+guid: aec426771d807e54ead8114769688fc6
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: AdSpace2
+    100002: Arm
+    100004: BackBoard
+    100006: BackBoard_Base
+    100008: BackBoard_Glass
+    100010: Backboard_Padding
+    100012: Base
+    100014: //RootNode
+    100016: Downloaded_from_DigitalSandwich_net
+    100018: Follow_@DigiWich_for_more
+    100020: Net
+    100022: Rim
+    100024: Rim_Hooks
+    100026: Rim_Net
+    100028: RimBack
+    100030: RimGuard
+    100032: Supports
+    100034: Supports_2
+    400000: AdSpace2
+    400002: Arm
+    400004: BackBoard
+    400006: BackBoard_Base
+    400008: BackBoard_Glass
+    400010: Backboard_Padding
+    400012: Base
+    400014: //RootNode
+    400016: Downloaded_from_DigitalSandwich_net
+    400018: Follow_@DigiWich_for_more
+    400020: Net
+    400022: Rim
+    400024: Rim_Hooks
+    400026: Rim_Net
+    400028: RimBack
+    400030: RimGuard
+    400032: Supports
+    400034: Supports_2
+    2100000: No Name
+    2100002: Backboard_Silver
+    2100004: Backboard_Elements
+    2100006: Hoop
+    2100008: Net
+    2100010: BackSupports
+    2100012: Padding
+    2100014: AdSpace
+    2300000: AdSpace2
+    2300002: Arm
+    2300004: BackBoard_Base
+    2300006: BackBoard_Glass
+    2300008: Backboard_Padding
+    2300010: Base
+    2300012: Net
+    2300014: Rim
+    2300016: Rim_Hooks
+    2300018: RimBack
+    2300020: RimGuard
+    2300022: Supports_2
+    3300000: AdSpace2
+    3300002: Arm
+    3300004: BackBoard_Base
+    3300006: BackBoard_Glass
+    3300008: Backboard_Padding
+    3300010: Base
+    3300012: Net
+    3300014: Rim
+    3300016: Rim_Hooks
+    3300018: RimBack
+    3300020: RimGuard
+    3300022: Supports_2
+    4300000: Backboard_Padding
+    4300002: BackBoard_Base
+    4300004: BackBoard_Glass
+    4300006: RimGuard
+    4300008: RimBack
+    4300010: Rim_Hooks
+    4300012: Rim
+    4300014: Net
+    4300016: Supports_2
+    4300018: Base
+    4300020: Arm
+    4300022: AdSpace2
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 3
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

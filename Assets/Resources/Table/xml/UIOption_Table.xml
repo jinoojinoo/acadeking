@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> 
+<TABLE Version ="1">
+  <UIOption>
+    <OptionType>WholeSound</OptionType>
+    <OptionValueName>전체사운드</OptionValueName>
+    <OptionOnOFFName>끄기/켜기</OptionOnOFFName>
+    <OnOffInverse>true</OnOffInverse>
+    <IsReverse>true</IsReverse>
+  </UIOption>
+  <UIOption>
+    <OptionType>BGMSound</OptionType>
+    <OptionValueName>배경음 볼륨</OptionValueName>
+    <OptionOnOFFName>끄기/켜기</OptionOnOFFName>
+    <OnOffInverse>true</OnOffInverse>
+    <IsReverse>true</IsReverse>
+  </UIOption>
+  <UIOption>
+    <OptionType>SFXSound</OptionType>
+    <OptionValueName>효과음 볼륨</OptionValueName>
+    <OptionOnOFFName>끄기/켜기</OptionOnOFFName>
+    <OnOffInverse>true</OnOffInverse>
+    <IsReverse>true</IsReverse>
+  </UIOption>
+  <UIOption>
+    <OptionType>GoogleConnect</OptionType>
+    <OptionValueName>구글연동하기</OptionValueName>
+    <OptionOnOFFName>해제/연동</OptionOnOFFName>
+    <OnOffInverse>true</OnOffInverse>
+  </UIOption>
+  <UIOption>
+    <OptionType>FaceBookConnect</OptionType>
+    <OptionValueName>페이스북연동하기</OptionValueName>
+    <OptionOnOFFName>해제/연동</OptionOnOFFName>
+    <OnOffInverse>true</OnOffInverse>
+  </UIOption>
+  <UIOption>
+    <OptionType>MouseStrength</OptionType>
+    <OptionValueName>터치 감도</OptionValueName>
+    <OptionOnOFFName>게이지/터치</OptionOnOFFName>
+  </UIOption>  
+</TABLE>

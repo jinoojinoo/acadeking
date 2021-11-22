@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> 
+<TABLE Version ="1">
+  <RoundSetting>
+    <ROUND>0</ROUND>
+    <SCORE>30</SCORE>
+    <TIME>30</TIME>
+    <MOVE_RIM>0.0</MOVE_RIM>
+  </RoundSetting>
+  <RoundSetting>
+    <ROUND>1</ROUND>
+    <SCORE>80</SCORE>
+    <TIME>30</TIME>
+    <MOVE_RIM>1.0</MOVE_RIM>
+  </RoundSetting>
+  <RoundSetting>
+    <ROUND>2</ROUND>
+    <SCORE>150</SCORE>
+    <TIME>30</TIME>
+    <MOVE_RIM>1.5</MOVE_RIM>
+  </RoundSetting>
+</TABLE>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> 
+<TABLE Version ="1">
+  <UIGameObject>
+    <TYPE>SoundManager</TYPE>
+    <PATH>Prefabs/SoundManager</PATH>
+  </UIGameObject>
+  <UIGameObject>
+    <TYPE>BasketBall</TYPE>
+    <PATH>Prefabs/basketball/BallType{0}</PATH>
+  </UIGameObject>
+  <UIGameObject>
+    <TYPE>NetworkManager</TYPE>
+    <PATH>Prefabs/Network/NetworkManager</PATH>
+  </UIGameObject>
+  <UIGameObject>
+    <TYPE>Network_InGamePlayer</TYPE>
+    <PATH>Prefabs/Network/Network_GamePlayer</PATH>
+  </UIGameObject>
+  <UIGameObject>
+    <TYPE>MemberItem</TYPE>
+    <PATH>Prefabs/GameUI/UI_MemberList_Item</PATH>
+  </UIGameObject>
+  <UIGameObject>
+    <TYPE>Arcade</TYPE>
+    <PATH>Prefabs/Arcade/Arcade</PATH>
+  </UIGameObject>
+  <UIGameObject>
+    <TYPE>ArcadeNew</TYPE>
+    <PATH>Prefabs/Arcade/arcadeBasketball</PATH>
+  </UIGameObject>
+  <UIGameObject>
+    <TYPE>Arcade_Camera</TYPE>
+    <PATH>Prefabs/Arcade/PlayerCamera</PATH>
+  </UIGameObject>
+  <UIGameObject>
+    <TYPE>Network_TimeManager</TYPE>
+    <PATH>Prefabs/Network/NetworkTimeManager</PATH>
+  </UIGameObject>
+  <UIGameObject>
+    <TYPE>ArcadeManager</TYPE>
+    <PATH>Prefabs/ArcadeManager</PATH>
+  </UIGameObject>
+  <UIGameObject>
+    <TYPE>UI_Guide</TYPE>
+    <PATH>Prefabs/GameUI/UI_Guide</PATH>
+  </UIGameObject>  
+</TABLE>
