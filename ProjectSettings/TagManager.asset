@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - CheckClickBall
+  - Lower
+  - Upper
+  - chain
+  - bounce
+  - backboard
   layers:
   - Default
   - TransparentFX
@@ -13,16 +19,16 @@ TagManager:
   - UI
   - 
   - 
+  - UI_POPUP
+  - Loaindg
   - 
   - 
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ball
+  - ThrowBall
+  - Arcade
   - 
   - 
   - 
