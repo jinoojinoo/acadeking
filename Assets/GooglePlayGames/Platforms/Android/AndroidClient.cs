@@ -174,7 +174,7 @@ namespace GooglePlayGames.Android
                 {
                     lock (AuthStateLock)
                     {
-                        Debug.Log("Returning an error code.");
+                        Debug.Log("Returning an error code." + result);
                         InvokeCallbackOnGameThread(callback, SignInHelper.ToSignInStatus(result));
                     }
                 }
