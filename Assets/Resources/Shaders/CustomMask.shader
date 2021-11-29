@@ -13,7 +13,7 @@ Shader "Custom/Mask"
 	{
 		Tags
 		{
-			"Queue" = "Transparent-1"
+			"Queue" = "Transparent"
 			"IgnoreProjector" = "True"
 			"RenderType" = "Transparent"
 			"PreviewType" = "Plane"
@@ -74,12 +74,13 @@ Shader "Custom/Mask"
 
 			fixed4 frag(v2f IN) : SV_Target
 			{
-				fixed4 c = tex2D(_MainTex, IN.texcoord) * IN.color;
-				if (c.a < 0.1) 
-					discard;
+				return fixed4(1,1,1,1);
 
-				c.rgb *= c.a;
-				return c;
+//				fixed4 c = tex2D(_MainTex, IN.texcoord) * IN.color;
+//				if (c.a < 0.1) 
+//					discard;
+//				c.rgb *= c.a;
+//				return c;
 			}
 			
 			ENDCG

@@ -130,6 +130,7 @@ public class Ball : ObjectBase
         {
             if (m_stencilShader == null)
                 m_stencilShader = Shader.Find("Custom/UIStencil");
+
             return m_stencilShader;
         }
     }
@@ -158,6 +159,7 @@ public class Ball : ObjectBase
 
         Renderer renderer = obj.GetComponent<Renderer>();
         renderer.material.shader = StencilShader;
+        renderer.material.renderQueue = 3000 + 1;
     }
 
     public static float GetBallSize(ShopType type)

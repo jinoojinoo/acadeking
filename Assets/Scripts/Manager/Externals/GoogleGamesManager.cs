@@ -93,7 +93,7 @@ public partial class GoogleGamesManager : SingletonMono<GoogleGamesManager>
         PlayerPrefabsID.SetLoginType(LOGIN_TYPE.GOOGLE, signin);
     }
 
-    public void SignInAuto()
+    public void SignInAuto(System.Action okFunc = null)
     {
         if (m_showPopup != null)
         {
@@ -109,6 +109,9 @@ public partial class GoogleGamesManager : SingletonMono<GoogleGamesManager>
                 m_showPopup.OnClick_Close();
                 m_showPopup = null;
             }
+
+            if (login && okFunc != null)
+                okFunc();
         }
         );
     }

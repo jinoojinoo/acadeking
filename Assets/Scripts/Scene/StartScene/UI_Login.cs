@@ -35,7 +35,10 @@ public class UI_Login : MonoBehaviour
         m_loginType = (int)PlayerPrefabsID.GetLoginType();
         if ((m_loginType & (1 << (int)LOGIN_TYPE.GOOGLE)) != 0)
         {
-            GoogleGamesManager.Instance.SignInAuto();
+            GoogleGamesManager.Instance.SignInAuto(() =>
+            {
+                OnClick_WarningOK();
+            });
         }
         if ((m_loginType & (1 << (int)LOGIN_TYPE.FACEBOOK)) != 0)
         {
@@ -94,23 +97,22 @@ public class UI_Login : MonoBehaviour
     public void OnClick_Google()
     {
         PlayerPrefabsID.SetLoginType(LOGIN_TYPE.GOOGLE, true);
-        GoogleGamesManager.Instance.SignInAuto();
+        GoogleGamesManager.Instance.SignInAuto(InitGoogle);
     }
 
-    private bool Initgooglename = false;
-    private void Update()
+    private void InitGoogle()
     {
         GoogleButton.isEnabled = GoogleGamesManager.Instance.IsSignIn() == false;
 
-        if (Initgooglename == false &&
-            GoogleGamesManager.Instance.IsSignIn())
-        {
-            Initgooglename = true;
-            m_userName = GoogleGamesManager.Instance.UserName;
-            UserNameInput.Set(m_userName);
-            BoxCollider collider = UserNameInput.GetComponent<BoxCollider>();
-            collider.enabled = false;
-        }
+        if (GoogleGamesManager.Instance.IsSignIn() == false)
+            return;
+
+        m_userName = GoogleGamesManager.Instance.UserName;
+        UserNameInput.Set(m_userName);
+        BoxCollider collider = UserNameInput.GetComponent<BoxCollider>();
+        collider.enabled = false;
+
+        OnClick_WarningOK();
     }
 
     public void OnClick_Leader1()
