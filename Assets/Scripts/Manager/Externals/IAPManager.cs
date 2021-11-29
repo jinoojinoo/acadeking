@@ -154,6 +154,7 @@ public class IAPManager : SingletonMono<IAPManager>, IStoreListener
 
         PopupBase popupbase = PopupManager.Instance.ShowPopup(POPUP_TYPE.BuyProduct);
         popupbase.MsgLabel.text = string.Format(popupbase.MsgLabel.text, property.ItemName);
+        popupbase.MsgLabel.text += string.Format($"_{GameUIManager.Instance.GetCurrentUISequence()?.name}");
 
         return PurchaseProcessingResult.Complete;
     }
@@ -217,6 +218,8 @@ public class IAPManager : SingletonMono<IAPManager>, IStoreListener
 
     public bool HadPurchased(string productid)
     {
+        Debug.LogError($"HadPurchased : {productid}");
+
         if (!IsInit)
             return false;
 

@@ -46,10 +46,10 @@ public class UI_LobbyScene : InGameUIScene
 
         SoloPlayLabel.text = string.Format(StringTable.SOLO_STR, AccountManager.Instance.MyAccountInfo.MyScore);
 
-        if (PlayerPrefabsID.IsGameModeSelecting() == false)
-        {
-            PopupManager.Instance.ShowPopup(POPUP_TYPE.GameModeSelect, SelectModeTouch, SelectModeGauge);
-        }
+//         if (PlayerPrefabsID.IsGameModeSelecting() == false)
+//         {
+//             PopupManager.Instance.ShowPopup(POPUP_TYPE.GameModeSelect, SelectModeTouch, SelectModeGauge);
+//         }
     }
 
     private void SelectModeGauge(params object[] parameters)

@@ -24,10 +24,16 @@ public partial class GoogleGamesManager : SingletonMono<GoogleGamesManager>
 
 #if UNITY_ANDROID
         PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder()
+//            .AddOauthScope("https://www.googleapis.com/auth/drive.file")
             .RequestIdToken()
             .EnableSavedGames()
             .Build();
 
+//         PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder()
+//             .RequestIdToken()
+//             .RequestServerAuthCode(false /* Don't force refresh */)
+//             .Build(
+        PlayGamesPlatform.DebugLogEnabled = true;
         PlayGamesPlatform.InitializeInstance(config);
 #if !PHEI_RELEASE
         PlayGamesPlatform.DebugLogEnabled = true;
@@ -48,7 +54,7 @@ public partial class GoogleGamesManager : SingletonMono<GoogleGamesManager>
     public void Init()
     {
 #if UNITY_EDITOR
-        LoadFromPlayerPrefab();
+       LoadFromPlayerPrefab();
 #endif
     }
 

@@ -232,13 +232,14 @@ public static class PlayerPrefabsID
         PlayerPrefs.Save();
     }
 
+    private const int DEFAULT_STRENGTH = 30;
     public static void LoadGameOption(ref bool ismouse, ref int strength)
     {
         int gameoption = PlayerPrefs.GetInt(GameOption, -1);
         if (gameoption == -1)
         {
             ismouse = false;
-            strength = 50;
+            strength = DEFAULT_STRENGTH;
 
             SaveGameOption(ismouse, strength);
             return;

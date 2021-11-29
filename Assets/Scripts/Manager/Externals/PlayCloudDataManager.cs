@@ -76,7 +76,6 @@ public partial class GoogleGamesManager : SingletonMono<GoogleGamesManager>
         {
             LoadFromPlayerPrefab();
             SaveToCloud();
-
             return;
         }
 

@@ -452,13 +452,14 @@ public class AccountManager : Singleton<AccountManager>
         }
     }
 
-    private bool m_ismouseMode = false;
+    private bool m_ismouseMode = true;
     public bool IsMouseMode
     {
         get
         {
             LoadGameOption();
-            return m_ismouseMode;
+            //            return m_ismouseMode;
+            return true;
         }
         set
         {
