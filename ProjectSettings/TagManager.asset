@@ -10,6 +10,9 @@ TagManager:
   - chain
   - bounce
   - backboard
+  - Ball
+  - Camera
+  - rim
   layers:
   - Default
   - TransparentFX

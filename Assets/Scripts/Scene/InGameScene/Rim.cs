@@ -32,7 +32,7 @@ public class Rim : MonoBehaviour
 
             Vector3 worldPt = transform.TransformPoint(m_myMesh.bounds.center);
             obj.transform.position = pos + worldPt;
-            obj.tag = "rim";
+            obj.tag = TAG_ID.TAG_Rim;
         }
 
         transform.localScale *= m_Scale;

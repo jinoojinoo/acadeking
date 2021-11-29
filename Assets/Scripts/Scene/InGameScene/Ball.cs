@@ -273,8 +273,8 @@ public class Ball : ObjectBase
 
     private void Awake()
     {
-        MyObject.layer = LayerMask.NameToLayer("Ball");
-        MyObject.tag = "Ball";
+        MyObject.layer = LayerMask.NameToLayer(TAG_ID.TAG_Ball);
+        MyObject.tag = TAG_ID.TAG_Ball;
     }
 
     private void Start()
@@ -636,20 +636,30 @@ public class Ball : ObjectBase
     {
         m_clearShot = CheckClearShot.Collider;
 
-        if (collision.gameObject.tag == "backboard")
-            SoundManager.Instance.PlaySound(UISOUND_ID.backboard);
-        else if (collision.gameObject.tag == "rim")
-            SoundManager.Instance.PlaySound(UISOUND_ID.rimhit);
-        else if (collision.gameObject.tag == "chain")
-            SoundManager.Instance.PlaySound(UISOUND_ID.hit_chain);
-        else if (collision.gameObject.tag == "bounce")
+        GameObject obj = collision.gameObject;
+        TAG_ID.TAG_TYPE type = TAG_ID.GetTagType(obj);
+        switch (type)
         {
-//            Debug.LogError("bound speed : " + MyRigidBody.velocity);
-            if (MyRigidBody.velocity.y > 2.5)
-                PlayBallBounceSound();
-        }            
-        //         if (m_testballNumber != 0)
-        //             Debug.LogError("OnCollisionEnter : " + collision.gameObject.name);
+            case TAG_ID.TAG_TYPE.Backboard:
+                SoundManager.Instance.PlaySound(UISOUND_ID.backboard);
+                break;
+
+            case TAG_ID.TAG_TYPE.Rim:
+                SoundManager.Instance.PlaySound(UISOUND_ID.rimhit);
+                break;
+
+            case TAG_ID.TAG_TYPE.Chain:
+                SoundManager.Instance.PlaySound(UISOUND_ID.hit_chain);
+                break;
+
+            case TAG_ID.TAG_TYPE.Bounce:
+                if (MyRigidBody.velocity.y > 2.5)
+                    PlayBallBounceSound();
+                break;
+
+            default:
+                return;
+        }
     }
 
     private void OnTriggerExit(Collider other)

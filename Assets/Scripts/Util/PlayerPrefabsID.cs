@@ -124,6 +124,41 @@ public class GameSaveData
     }
 }
 
+public static class TAG_ID
+{
+    public static string TAG_BackBoard = "backboard";
+    public static string TAG_Rim = "rim";
+    public static string TAG_Chain = "chain";
+    public static string TAG_Bounce = "bounce";
+    public static string TAG_Ball = "Ball";
+
+    public enum TAG_TYPE
+    {
+        Backboard,
+        Rim,
+        Chain,
+        Bounce,
+        Ball,
+    }
+
+    public static TAG_TYPE GetTagType(GameObject obj)
+    {
+        string tag = obj.tag;
+        if (string.Compare(tag, TAG_BackBoard) == 0)
+            return TAG_TYPE.Backboard;
+        else if (string.Compare(tag, TAG_Rim) == 0)
+            return TAG_TYPE.Rim;
+        else if (string.Compare(tag, TAG_Chain) == 0)
+            return TAG_TYPE.Chain;
+        else if (string.Compare(tag, TAG_Bounce) == 0)
+            return TAG_TYPE.Bounce;
+        else if (string.Compare(tag, TAG_Ball) == 0)
+            return TAG_TYPE.Ball;
+
+        return TAG_TYPE.Backboard;
+    }
+}
+
 public static class PlayerPrefabsID
 {
     public static string LoginType = "LoginType";
