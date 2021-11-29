@@ -17,7 +17,6 @@
 namespace GooglePlayGames.OurUtils
 {
     using System;
-    using UnityEngine;
 
     public static class Misc
     {
@@ -84,7 +83,7 @@ namespace GooglePlayGames.OurUtils
             {
                 throw new ArgumentNullException();
             }
-
+        
             return value;
         }
 
@@ -96,12 +95,6 @@ namespace GooglePlayGames.OurUtils
             }
 
             return value;
-        }
-
-        public static bool IsApiException(AndroidJavaObject exception) {
-            var exceptionClassName = exception.Call<AndroidJavaObject>("getClass")
-                .Call<String>("getName");
-            return exceptionClassName == "com.google.android.gms.common.api.ApiException";
         }
     }
 }
