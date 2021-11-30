@@ -136,7 +136,7 @@ public abstract class GameUISequence : MonoBehaviour
 
     public void SetUICameraEnable(bool enable)
     {
-        Debug.LogError("camera enable : " + enable);
+//        Debug.LogError("camera enable : " + enable);
         MyUICamera.enabled = enable;
     }
 

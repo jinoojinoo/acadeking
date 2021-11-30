@@ -24,16 +24,10 @@ public partial class GoogleGamesManager : SingletonMono<GoogleGamesManager>
 
 #if UNITY_ANDROID
         PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder()
-//            .AddOauthScope("https://www.googleapis.com/auth/drive.file")
             .RequestIdToken()
             .EnableSavedGames()
             .Build();
 
-//         PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder()
-//             .RequestIdToken()
-//             .RequestServerAuthCode(false /* Don't force refresh */)
-//             .Build(
-        PlayGamesPlatform.DebugLogEnabled = true;
         PlayGamesPlatform.InitializeInstance(config);
 #if !PHEI_RELEASE
         PlayGamesPlatform.DebugLogEnabled = true;
@@ -93,7 +87,7 @@ public partial class GoogleGamesManager : SingletonMono<GoogleGamesManager>
         PlayerPrefabsID.SetLoginType(LOGIN_TYPE.GOOGLE, signin);
     }
 
-    public void SignInAuto(System.Action okFunc = null)
+    public void SignInAuto(System.Action<bool> okFunc = null)
     {
         if (m_showPopup != null)
         {
@@ -110,8 +104,10 @@ public partial class GoogleGamesManager : SingletonMono<GoogleGamesManager>
                 m_showPopup = null;
             }
 
+            UnityEngine.Debug.LogError("SignIn : " + login); 
+
             if (login && okFunc != null)
-                okFunc();
+                okFunc(login);
         }
         );
     }
@@ -128,6 +124,8 @@ public partial class GoogleGamesManager : SingletonMono<GoogleGamesManager>
 
         Social.localUser.Authenticate((bool success) =>
         {
+            UnityEngine.Debug.LogError("Social.localUser.Authenticate : " + success + ", Social.localUser : " + Social.localUser.authenticated + " , Social.localUser.userName : " + Social.localUser.userName);
+
             if (success)
             {
                 if (action != null)
@@ -139,7 +137,7 @@ public partial class GoogleGamesManager : SingletonMono<GoogleGamesManager>
             else
             {
                 if (action != null)
-                    action(true);
+                    action(Social.localUser.authenticated);
             }
         });
     }

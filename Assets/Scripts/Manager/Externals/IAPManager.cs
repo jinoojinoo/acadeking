@@ -150,12 +150,12 @@ public class IAPManager : SingletonMono<IAPManager>, IStoreListener
         }
 
 
-        Debug.LogError("property product : " + property);
+        if ((GameUIManager.Instance.GetCurrentUISequence()?.MyGameUIMode ?? GAME_UI_MODE.None) <= GAME_UI_MODE.Start)
+            return PurchaseProcessingResult.Complete;
 
+        Debug.LogError("property product : " + property);
         PopupBase popupbase = PopupManager.Instance.ShowPopup(POPUP_TYPE.BuyProduct);
         popupbase.MsgLabel.text = string.Format(popupbase.MsgLabel.text, property.ItemName);
-        popupbase.MsgLabel.text += string.Format($"_{GameUIManager.Instance.GetCurrentUISequence()?.name}");
-
         return PurchaseProcessingResult.Complete;
     }
 

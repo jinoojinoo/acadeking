@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-#if !UNITY_EDITOR
+#if UNITY_EDITOR
 public static class Debug
 {
 	//[System.Diagnostics.Conditional("UNITY_EDITOR")]

@@ -30,7 +30,7 @@ public class UI_StartScene : InGameUIScene
         InGameManager.ClientOnlyPlay = false;
 #endif
         SoundManager.Instance.LoadOptionValue();
-        GameUIManager.Instance.PushSequence(GAME_UI_MODE.UI_Lobby, MyObject);
+        GameUIManager.Instance.PushSequence(GAME_UI_MODE.Start, MyObject);
     }    
 
     public override void StartGameSequence(int option)

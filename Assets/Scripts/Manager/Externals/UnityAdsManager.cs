@@ -116,14 +116,11 @@ public class UnityAdsManager : MonoBehaviour, IUnityAdsListener
 
     IEnumerator ShowBannerWhenReady()
     {
-        Debug.LogError("ShowBannerWhenReady 1");
         while (!Advertisement.IsReady(banner_id))
         {
-            Debug.LogError("ShowBannerWhenReady 2");
             yield return new WaitForSeconds(0.5f);
         }
 
-        Debug.LogError("ShowBannerWhenReady 3");
         Advertisement.Banner.SetPosition(BannerPosition.BOTTOM_CENTER);
         BannerOptions options = new BannerOptions { showCallback = OnShowBanner, hideCallback = OnHideBanner };
         Advertisement.Banner.Show(banner_id, options);        
