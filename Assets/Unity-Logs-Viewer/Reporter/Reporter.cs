@@ -287,10 +287,10 @@ public class Reporter : MonoBehaviour
 
 	void Awake()
 	{
-// #if PHEI_RELEASE
-//         gameObject.SetActive(false);
-//         return;
-// #endif
+#if PHEI_RELEASE
+        gameObject.SetActive(false);
+        return;
+#endif
 
         if (!Initialized)
 			Initialize();

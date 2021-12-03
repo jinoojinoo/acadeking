@@ -19,7 +19,7 @@ public enum SceneState
 
 public class SceneManager : SingletonMono<SceneManager>
 {
-    public const string SceneName_Start = "Start";
+    public const string SceneName_Start = "Login";
     public const string SceneName_Lobby = "Lobby";
 //    public const string SceneName_Arcade = "Arcade";
     public const string SceneName_InGame = "InGame2";

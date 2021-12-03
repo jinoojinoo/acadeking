@@ -35,16 +35,23 @@ public class UI_Login : MonoBehaviour
         m_loginType = (int)PlayerPrefabsID.GetLoginType();
         if ((m_loginType & (1 << (int)LOGIN_TYPE.GOOGLE)) != 0)
         {
-            GoogleGamesManager.Instance.SignInAuto(null);
-
-            StopCoroutine("WaitForSignIn");
-            StartCoroutine("WaitForSignIn");
+            InitSignInAuto();
         }
 
         if ((m_loginType & (1 << (int)LOGIN_TYPE.FACEBOOK)) != 0)
         {
             FaceBookManager.Instance.FaceBookLogin(true);
         }
+    }
+
+    private void InitSignInAuto()
+    {
+        InGameManager.Instance.SignInAuto(() =>
+        {
+            m_userName = GoogleGamesManager.Instance.UserName;
+            UserNameInput.Set(m_userName);
+            OnClick_WarningOK();
+        });
     }
 
     private void SignInOk(bool sign)
@@ -98,13 +105,10 @@ public class UI_Login : MonoBehaviour
     public void OnClick_Google()
     {
         PlayerPrefabsID.SetLoginType(LOGIN_TYPE.GOOGLE, true);
-        GoogleGamesManager.Instance.SignInAuto();
-
-        StopCoroutine("WaitForSignIn");
-        StartCoroutine("WaitForSignIn");
+        InitSignInAuto();
     }
 
-    private void InitGoogle(bool islogin)
+/*    private void InitGoogle(bool islogin)
     {
         if (islogin == false)
             return;
@@ -124,34 +128,7 @@ public class UI_Login : MonoBehaviour
             UserNameInput.Set(m_userName);
             OnClick_WarningOK();
         }
-    }
-
-    IEnumerator WaitForSignIn()
-    {
-        while (GoogleGamesManager.Instance.IsSignIn() == false)
-        {
-            yield return null;
-        }
-
-        bool isloadcloud = false;
-        PopupBase popup = PopupManager.Instance.ShowPopup(POPUP_TYPE.Notice_WaitForLogin);
-        GoogleGamesManager.Instance.LoadFromCloud((islogin) =>
-        {
-            popup.OnClick_Close();
-            isloadcloud = true;
-        });
-        
-        while (isloadcloud == false)
-        {
-            yield return null;
-        }
-
-        m_userName = GoogleGamesManager.Instance.UserName;
-        UserNameInput.Set(m_userName);
-        OnClick_WarningOK();
-
-        yield break;
-    }
+    }*/
 
     public void OnClick_Leader1()
     {

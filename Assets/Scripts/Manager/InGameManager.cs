@@ -360,6 +360,39 @@ public class InGameManager : SingletonMono<InGameManager>
         }*/
     }
 #endif
+
+    public void SignInAuto(System.Action signinok)
+    {
+        GoogleGamesManager.Instance.SignInAuto();
+        StopCoroutine("WaitForSignIn");
+        StartCoroutine("WaitForSignIn", signinok);
+    }
+
+    IEnumerator WaitForSignIn(System.Action signinok)
+    {
+        while (GoogleGamesManager.Instance.IsSignIn() == false)
+        {
+            yield return null;
+        }
+
+        bool isloadcloud = false;
+        PopupBase popup = PopupManager.Instance.ShowPopup(POPUP_TYPE.Notice_WaitForLogin);
+        GoogleGamesManager.Instance.LoadFromCloud((islogin) =>
+        {
+            popup.OnClick_Close();
+            isloadcloud = true;
+        });
+
+        while (isloadcloud == false)
+        {
+            yield return null;
+        }
+
+        if (signinok != null)
+            signinok();
+
+        yield break;
+    }
 }
 
 

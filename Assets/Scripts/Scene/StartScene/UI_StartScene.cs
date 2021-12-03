@@ -5,10 +5,20 @@ using UnityEngine;
 
 public class UI_StartScene : InGameUIScene
 {
+    private static bool INIT_ENVIROMENT = false;
+
     protected override void Awake()
     {
         base.Awake();
+        InitEnviroment();
+    }
 
+    private void InitEnviroment()
+    { 
+        if (INIT_ENVIROMENT)
+            return;
+
+        INIT_ENVIROMENT = true;
         Application.runInBackground = true;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         Application.targetFrameRate = 60;

@@ -44,9 +44,12 @@ public class UI_LobbyScene : InGameUIScene
         InGameManager.Instance.CurrentPlayMode = InGameManager.PLAY_MODE.None;
         SoundManager.Instance.PlaySound(UISOUND_ID.BGM_Start, true);
         CreateTestBall();
+        InitScore();
+    }
 
+    private void InitScore()
+    { 
         SoloPlayLabel.text = string.Format(StringTable.SOLO_STR, AccountManager.Instance.MyAccountInfo.MyScore);
-
 //         if (PlayerPrefabsID.IsGameModeSelecting() == false)
 //         {
 //             PopupManager.Instance.ShowPopup(POPUP_TYPE.GameModeSelect, SelectModeTouch, SelectModeGauge);
@@ -137,8 +140,12 @@ public class UI_LobbyScene : InGameUIScene
 
     private void OK_SIGNIN(params object[] parameters)
     {
-//        SetUICameraEnable(false);
-        GoogleGamesManager.Instance.SignInAuto();
+        SetUICameraEnable(false);
+        InGameManager.Instance.SignInAuto(()=>
+        {
+            SetUICameraEnable(true);
+            InitScore();
+        });
     }
 
     public void OnClick_Solo()
