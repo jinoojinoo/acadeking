@@ -76,7 +76,7 @@ Transform:
   m_GameObject: {fileID: 1000013028682052}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.0010416667, y: 0.0010414124, z: 0.0010416667}
+  m_LocalScale: {x: 0.0010416667, y: 0.0010417947, z: 0.0010416667}
   m_Children:
   - {fileID: 4000012989221090}
   m_Father: {fileID: 4000012192000578}
@@ -214,9 +214,10 @@ Camera:
   m_ClearFlags: 3
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -302,7 +303,7 @@ MonoBehaviour:
   TransitionMaterial: {fileID: 2100000, guid: f2cd4c5c8bba740608c783beced5ec50, type: 2}
   CurrentMode: 0
   TransitionTex:
-  - {fileID: 2800000, guid: 552efa9aa6fab4dc49eefb6bbf12893e, type: 3}
+  - {fileID: 2800000, guid: b86b90200c7ae44c0bcf2d554816578d, type: 3}
 --- !u!1 &1021142531852948
 GameObject:
   m_ObjectHideFlags: 0

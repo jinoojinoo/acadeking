@@ -131,7 +131,7 @@ public partial class GoogleGamesManager : SingletonMono<GoogleGamesManager>
                 if (action != null)
                     action(true);
 
-                LoadFromCloud(action);
+//                LoadFromCloud(action);
 //                FaceBookManager.Instance.FaceBookLogin(true);
             }
             else

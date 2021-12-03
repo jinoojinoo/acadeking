@@ -133,7 +133,18 @@ public class UI_Login : MonoBehaviour
             yield return null;
         }
 
-        GoogleGamesManager.Instance.LoadFromCloud(null);
+        bool isloadcloud = false;
+        PopupBase popup = PopupManager.Instance.ShowPopup(POPUP_TYPE.Notice_WaitForLogin);
+        GoogleGamesManager.Instance.LoadFromCloud((islogin) =>
+        {
+            popup.OnClick_Close();
+            isloadcloud = true;
+        });
+        
+        while (isloadcloud == false)
+        {
+            yield return null;
+        }
 
         m_userName = GoogleGamesManager.Instance.UserName;
         UserNameInput.Set(m_userName);

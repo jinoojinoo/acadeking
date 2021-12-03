@@ -32,6 +32,7 @@ public class UI_LobbyScene : InGameUIScene
     void Start()
     {
         GameUIManager.Instance.PushSequence(this.gameObject, GAME_UI_MODE.UI_Lobby, false);
+        GlobalValue_Table.Instance.LoadEnvironment();
     }
 
     private const int BALL_COUNT = 5;
