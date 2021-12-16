@@ -65,8 +65,8 @@ public partial class GoogleGamesManager : SingletonMono<GoogleGamesManager>
     public void LoadFromCloud(System.Action<bool> action)
     {
         m_loadAction = action;
-        if (m_loadAction != null)
-            m_loadAction(false);
+//         if (m_loadAction != null)
+//             m_loadAction(false);
         LoadFromCloud(action, InitLoadData);
     }
 

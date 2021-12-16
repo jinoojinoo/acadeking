@@ -29,6 +29,17 @@ public class UnityAdsManager : MonoBehaviour, IUnityAdsListener
     private const string banner_id = "banner";
 
     private int m_adCount = 0;
+    private int AdCount
+    {
+        set
+        {
+            m_adCount = value;
+        }
+        get
+        {
+            return m_adCount;
+        }
+    }
 
 #if PHEI_RELEASE
     bool testMode = false;
@@ -60,19 +71,19 @@ public class UnityAdsManager : MonoBehaviour, IUnityAdsListener
     {
         if (Advertisement.IsReady(rewarded_video_id) == false)
         {
-            ActionCheckADFunc();
+            ActionCheckADFunc(false);
             return;
         }
 
         Advertisement.Show(rewarded_video_id);
     }
 
-    public void ActionCheckADFunc()
+    public void ActionCheckADFunc(bool resetcount = false)
     {
         if (m_checkadfunc != null)
             m_checkadfunc();
-
-        m_adCount = 0;
+        if (resetcount)
+            AdCount = 0;
     }
 
     // Implement IUnityAdsListener interface methods:
@@ -83,11 +94,12 @@ public class UnityAdsManager : MonoBehaviour, IUnityAdsListener
         {
             // Reward the user for watching the ad to completion.
             AccountManager.Instance.AdReward();
-            ActionCheckADFunc();
+            ActionCheckADFunc(true);
         }
         else if (showResult == ShowResult.Skipped)
         {
             // Do not reward the user for skipping the ad.
+//            ActionCheckADFunc(true);
         }
         else if (showResult == ShowResult.Failed)
         {
@@ -168,11 +180,9 @@ public class UnityAdsManager : MonoBehaviour, IUnityAdsListener
             return;
         }
 
-        m_adCount++;
-        if (m_adCount >= AD_COUNT)
+        AdCount++;
+        if (AdCount >= AD_COUNT)
         {
-            m_adCount = 0;
-
             m_checkadfunc = action;
             PopupManager.Instance.ShowBuyADPopup(OK_ADbuy, Cancel_AdBuy);
             return;
@@ -190,6 +200,5 @@ public class UnityAdsManager : MonoBehaviour, IUnityAdsListener
     private void Cancel_AdBuy(params object[] paramters)
     {
         ShowRewardedVideo();
-        m_adCount = 0;
     }
 }
